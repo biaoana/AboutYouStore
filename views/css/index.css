@@ -1,0 +1,14 @@
+.viewProd{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid rgb(71, 195, 233);
+    box-shadow: 2px 3px 8px rgb(179, 226, 245);
+    border-radius: 15px;
+    margin: 10px 0 10px 50vh;
+    padding: 10px;
+}
+.viewProd:hover{
+    transform: scale(1.04);
+}

@@ -1,0 +1,18 @@
+if element.variation_attributes.length
+    -var color=element.variation_attributes[0].values[0].value
+    -var variants=element.variants
+    select#size(name='size' )
+        option Select a variant
+        each variant in variants
+            if color===variant.variation_values.color
+                if variant.variation_values.size
+                    option(value=`${variant.product_id}`) Size:#{variant.variation_values.size} Price:#{variant.price}
+                else
+                    option(value=`${variant.product_id}`) Price:#{variant.price}
+
+
+                      
+                    
+            
+
+

@@ -1,0 +1,43 @@
+.mySlides{display: none;}
+.display-product{
+    width:1100px;
+    box-shadow: rgb(0, 204, 255) 2px 2px 3px ;
+    display: inline-flex;
+    margin: 50px 210px;
+}
+.product-details
+{
+    width:600px;
+    
+    text-align: center;
+    margin-top: 15px;
+    padding: 100px 20px;
+    height: 583px;
+}
+.price
+{
+    width:150px;
+    padding:5px;
+    box-shadow: 2px 2px 3px red;
+    margin-right: 30px;
+    border-radius: 4px;
+}
+select{
+    border: 2px solid rgb(71, 195, 233);
+    box-shadow: 2px 3px 8px rgb(179, 226, 245);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+}
+.buttonAction{
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid rgb(71, 195, 233);
+    box-shadow: 2px 3px 8px rgb(179, 226, 245);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 5px;
+}
+.buttonAction:hover{
+    transform: scale(1.04); 
+}

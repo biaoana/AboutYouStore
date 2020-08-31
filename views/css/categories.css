@@ -1,0 +1,21 @@
+.products
+{
+    margin: 20px 300px;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 3px black solid;
+}
+.section{
+    margin:  30px 300px;
+}
+.products img{
+    width:900px;
+}
+.products a .button{
+    text-decoration: none;
+    padding:5px;
+    background-color: wheat;
+    border-radius: 4px;
+    color: black;
+    cursor: context-menu;
+}

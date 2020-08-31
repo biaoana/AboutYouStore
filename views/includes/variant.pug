@@ -1,0 +1,15 @@
+-var variants=element.data[0].variants
+each variant in variants
+    if(variant.product_id===element.variant) 
+        .cart   
+            include cartImage.pug  
+            p Price:#{variant.price}
+            if variant.variation_values.size 
+                p size:#{variant.variation_values.size} 
+            form(action='/updateQuantity' method='post')
+                input(type='hidden' value=`${element.data[0].id}` name='id')
+                input(type='hidden' value=`${element.variant}` name='variantId')
+                input(type='submit' value='less' name='action')
+                input(type='text' value=`${element.quantity}` name='quantity') 
+                input(type='submit' value='more' name='action')
+            p Total:#{element.quantity*variant.price}

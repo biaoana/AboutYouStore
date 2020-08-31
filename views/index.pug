@@ -1,0 +1,16 @@
+extends layout.pug
+block content
+    style
+        include css/index.css
+    h1.section Subcategories
+    each item in items
+        if item.image!='categories/category_404.png'
+            .products
+                p #{item.name}
+                .subcategories
+                    .img
+                        img(src=`/images/${item.image}`)
+                    .description
+                        p #{item.page_description}
+                .viewProd
+                    a(href=`/women/${item.id}?page=1`) View Products

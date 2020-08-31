@@ -1,0 +1,8 @@
+if element.variation_attributes.length
+        -var color=JSON.parse(JSON.stringify(element.variation_attributes[0].values));
+        input.element(type="hidden" value=`${JSON.stringify(color)}`)
+        each itemColor in color
+                .color(id=`${itemColor.name}` style=`width:20px;height:20px;background-color:${itemColor.name}; border:2px solid black;margin-right:5px`  data-color=`${itemColor.value}` )
+        p.error
+                
+

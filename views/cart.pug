@@ -1,0 +1,9 @@
+extends layout.pug
+block content
+    style
+        include css/cart.css
+    if item.length > 0
+        each element in item
+            include includes/variant.pug
+    else
+        p #{error}    

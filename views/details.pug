@@ -1,0 +1,44 @@
+extends layout.pug
+block content 
+   p.error=error
+   each element in item
+        input.imageGroup(value=`${JSON.stringify(element.image_groups)}` type="hidden")
+        input.variants(value=`${JSON.stringify(element.variants)}` type="hidden")
+
+        .display-product
+            .w3-content.w3-display-container(style="width:350px;margin:30px 50px")
+                .photo
+                    -var i=0
+                    while i < element.image_groups[0].images.length
+                        img.mySlides(src=`/images/${element.image_groups[0].images[i].link}` style='width:100%')
+                        -i++
+                button.w3-button.w3-black.w3-display-left(onclick='plusDivs(-1)') &#x276E;
+                button.w3-button.w3-black.w3-display-right(onclick='plusDivs(1)') &#x276F;
+            include includes/color.pug
+            .product-details
+                p #{element.short_description}
+                .action(style="margin-top:100px")
+                    p.price(style="margin-right:100px;") Price: #{element.currency} #{element.price}
+                    if element.variation_attributes.length
+                        form(action='/buy' method='post') 
+                            input(name='id' hidden  value=`${element.id}`)
+                            .sizeSection
+                                include includes/size.pug
+                            select#sizeSelect(name="quantity")
+                                option Select the quantity
+                                option(value='1') 1
+                                option(value='2') 2
+                                option(value='3') 3
+                            br
+                            input.buttonAction(type='submit' name='button' value='Cart') 
+                            input.buttonAction(type='submit' name='button' value='WishList') 
+                    else
+                        p Out of stock
+
+
+                        
+            
+            
+            
+
+

@@ -1,0 +1,16 @@
+-var imageGroup=element.data[0].image_groups
+
+each image in imageGroup
+    if image.variation_value===color && image.view_type==='small'
+        each section in image.images 
+            img(src=`/images/${section.link}`)
+-var color=variant.variation_values.color
+-var attributes=element.data[0].variation_attributes[0]
+each attribute in attributes.values
+    if(attribute.value===color)
+        p Color: #{attribute.name}
+
+
+            
+           
+    
